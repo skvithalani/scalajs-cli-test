@@ -2,3 +2,5 @@ node_modules/
 target/
 lib/main.js
 *.log
+.idea
+.buildconfig

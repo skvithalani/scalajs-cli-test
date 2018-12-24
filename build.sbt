@@ -1,6 +1,9 @@
 resolvers += Resolver.sonatypeRepo("releases")
 enablePlugins(ScalaJSPlugin)
-name := "Scala.js CLI Demo first release"
+
+organization := "com.tribbloids.spike.scalajs"
+name := "scalajs-cli-demo"
+version := "0.1.0-SNAPSHOT"
 scalaVersion := "2.12.7"
 scalaJSModuleKind := ModuleKind.CommonJSModule
 scalaJSUseMainModuleInitializer := true

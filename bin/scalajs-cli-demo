@@ -1,2 +1,3 @@
-#! /usr/bin/env node
-require("../lib/main.js");
+#! /usr/bin/env node -r esm
+
+import * as A from "../lib/main.js"

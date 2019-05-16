@@ -1,23 +1,28 @@
 {
-  "name": "scalajs-cli-test3",
-  "version": "1.0.2",
+  "name": "scalajs-cli-test",
+  "version": "1.0.6",
   "description": "POC to see if we can publish ScalaJS apps on npmjs.",
-
+  "bin": {
+    "scalajs-cli-test": "bin/scalajs-cli-demo"
+  },
   "scripts": {
     "prepublish": "sbt 'show fullOptJS' && cp target/scala-2.12/scalajs-cli-demo-opt.js ./lib/main.js",
     "test": "sbt test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skvithalani/scalajs-cli-test.git"
+    "url": "git+https://github.com/ScalaWilliam/scalajs-cli-demo.git"
   },
   "keywords": [
     "scalajs",
     "cli"
   ],
-  "author": "Saloni",
+  "author": "ScalaWilliam",
   "license": "ISC",
-  "homepage": "https://github.com/skvithalani/scalajs-cli-test#readme",
+  "bugs": {
+    "url": "https://github.com/ScalaWilliam/scalajs-cli-demo/issues"
+  },
+  "homepage": "https://github.com/ScalaWilliam/scalajs-cli-demo#readme",
   "dependencies": {
     "esm": "^3.2.22"
   }

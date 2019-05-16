@@ -1,3 +1,5 @@
+import org.scalajs.core.tools.linker.backend.ModuleKind.CommonJSModule
+
 resolvers += Resolver.sonatypeRepo("releases")
 enablePlugins(ScalaJSPlugin)
 
@@ -5,7 +7,7 @@ organization := "com.tribbloids.spike.scalajs"
 name := "scalajs-cli-demo"
 version := "0.1.0-SNAPSHOT"
 scalaVersion := "2.12.8"
-scalaJSModuleKind := ModuleKind.ESModule
+scalaJSModuleKind := CommonJSModule
 scalaJSUseMainModuleInitializer := true
 mainClass in Compile := Some("HelloWorldApp")
 

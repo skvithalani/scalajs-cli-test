@@ -1,9 +1,9 @@
 {
   "name": "scalajs-cli-test2",
-  "version": "2.1.1",
+  "version": "2.1.9",
   "description": "POC to see if we can publish ScalaJS apps on npmjs.",
   "scripts": {
-    "prepublish": "sbt 'show fullOptJS' && cp target/scala-2.12/scalajs-cli-demo-opt.js ./lib/index.js",
+    "prepublish": "sbt 'show fullOptJS' && cp target/scala-2.12/scalajs-cli-demo-opt.js index.js",
     "test": "sbt test"
   },
   "repository": {
@@ -14,6 +14,7 @@
     "scalajs",
     "cli"
   ],
+  "files": ["index.js"],
   "author": "ScalaWilliam",
   "license": "ISC",
   "bugs": {

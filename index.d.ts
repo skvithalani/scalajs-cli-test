@@ -1,6 +1,6 @@
-declare class HelloWorldLib {
-    square: (number) => number
-}
+declare const HelloWorldLib: {
+    square: (value: number) => number;
+};
 
 declare const dd: string;
 

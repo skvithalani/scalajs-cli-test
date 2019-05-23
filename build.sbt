@@ -27,14 +27,18 @@ import scalajsbundler.util.JSON._
 
 additionalNpmConfig in Compile := {
   val path = (Compile / fullOptJS / artifactPath).value.name.stripSuffix(".js")+"-bundle.js"
-//  val classPath = (Compile / classDirectory).value.getAbsolutePath
+  val typePath = path.stripSuffix("-bundle.js") + ".d.ts"
   Map(
     "name" -> str(name.value),
     "version" -> str(version.value),
     "description" -> str(desc),
+    "README.md" → str(""),
+    "keywords" → arr(str("")),
     "license" -> str(license),
     "repository" -> str(repoUrl),
     "files" -> arr(resourceDir.listFiles().map(x => str(x.name)): _*),
-    "main" -> str(path)
+    "main" -> str(path),
+    "types" → str(typePath),
+
   )
 }

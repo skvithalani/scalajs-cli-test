@@ -1,10 +1,8 @@
 // import * as ddd from "scalajs-cli-test2"
-var ddd = require("index")
+var ddd = require("./target/scala-2.12/scalajs-bundler/main/scalajs-cli-test4-fastopt-bundle")
 
 console.log("**********************")
-console.log(ddd.HelloWorldLib.square(2))
-console.log(ddd.dd)
-console.log(ddd.HelloWorldLib)
+console.log(ddd)
 console.log("**********************")
 
 exports.piny = function piny(string) {

@@ -1,17 +1,20 @@
+import org.scalajs.core.tools.linker.backend.ModuleKind.CommonJSModule
+
 resolvers += Resolver.sonatypeRepo("releases")
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")
 enablePlugins(ScalaJSBundlerPlugin)
-//enablePlugins(ScalaJSPlugin)
 
 organization := "com.thoughtworks.scalajs"
 name := "scalajs-cli-test4"
 version := "3.0.2"
 scalaVersion := "2.12.8"
-//scalaJSModuleKind := CommonJSModule
+scalaJSModuleKind := CommonJSModule
 scalaJSUseMainModuleInitializer := true
 mainClass in Compile := Some("HelloWorldApp")
 
 // https://mvnrepository.com/artifact/io.scalajs/nodejs
-libraryDependencies += "io.scalajs" %%% "nodejs" % "0.4.2"
+//libraryDependencies += "io.scalajs" %%% "nodejs" % "0.4.2"
+libraryDependencies ++= Seq(ScalablyTyped.N.node)
 
 val resourceDir = new File("/Users/in-puneet.patwari/Documents/Workspace/TMT/scalajs-cli-test/src/main/resources")
 
@@ -36,7 +39,7 @@ additionalNpmConfig in Compile := {
     "keywords" → arr(str("")),
     "license" -> str(license),
     "repository" -> str(repoUrl),
-    "files" -> arr(resourceDir.listFiles().map(x => str(x.name)): _*),
+//    "files" -> arr(resourceDir.listFiles().map(x => str(x.name)): _*),
     "main" -> str(path),
     "types" → str(typePath),
 

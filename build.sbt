@@ -11,7 +11,7 @@ scalaVersion := "2.12.8"
 scalaJSModuleKind := CommonJSModule
 scalaJSUseMainModuleInitializer := true
 mainClass in Compile := Some("HelloWorldApp")
-
+webpackConfigFile := Some(baseDirectory.value / "my.webpack.config.js")
 // https://mvnrepository.com/artifact/io.scalajs/nodejs
 //libraryDependencies += "io.scalajs" %%% "nodejs" % "0.4.2"
 libraryDependencies ++= Seq(ScalablyTyped.N.node)
